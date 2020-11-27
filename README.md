@@ -1,11 +1,11 @@
 # ReMarkable upload script & Mac OS Automator Workflows
 
-This tiny script uses [rmapy](https://github.com/subutux/rmapy) to upload files to the Remarkable cloud. You can then use this script with Mac OS Automator workflows:
+This tiny Python3 script uses [rmapy](https://github.com/subutux/rmapy) to upload files to the ReMarkable cloud. You can then use this script with Mac OS Automator workflows:
 
-- to have a tiny app that you can call, select a file and have it uploaded without opening the Remarkable Desktop app
-- or more interestingly by using a "Folder Action" that will upload all EPUB files downloaded to your ReMarkable reader.
+1. a tiny app to select and upload files
+2. (more interestingly) a "Folder Action" that will upload all EPUB files downloaded
 
-This last script works really nicely with the [epub-press](https://github.com/haroldtreen/epub-press-clients) browser extensions that let you create EPUB books easily from your browser
+This works nicely with the [epub-press](https://github.com/haroldtreen/epub-press-clients) browser extensions that lets you create EPUB books easily from your browser
 
 ## Install
 
@@ -41,10 +41,10 @@ python3 upload_file.py /path/to/file.epub
 
 You can try copying the `./remarkable-upload-file.workflow` file and see if it works out-of-the box for you, you may have to rewrite paths.
 
-![](./remarkable-upload-file.workflow/QuickLook/Preview.png)
+![remarkable-upload-file.workflow](https://raw.githubusercontent.com/adipasquale/remarkable-automator/main/remarkable-upload-file.workflow/Contents/QuickLook/Preview.png)
 
 ### 2. Folder Action : auto-upload all downloaded EPUB
 
 Again, you can try copying the `./remarkable-upload-file.workflow` file and see if it works out-of-the box for you, you may have to rewrite paths.
 
-![](./upload-downloaded-ebook-to-remarkable.workflow/QuickLook/Preview.png)
+![upload-downloaded-ebook-to-remarkable.workflow](https://raw.githubusercontent.com/adipasquale/remarkable-automator/main/upload-downloaded-ebook-to-remarkable.workflow/Contents/QuickLook/Preview.png)
