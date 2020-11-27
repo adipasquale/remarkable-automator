@@ -17,7 +17,7 @@ pip3 install -r requirements.txt
 
 ## Initial Config
 
-Head to [https://my.remarkable.com/connect/desktop](my.remarkable.com/connect/desktop), copy the 6 letter code and call the register_device.py script:
+Head to [my.remarkable.com/connect/desktop](https://my.remarkable.com/connect/desktop), copy the 6 letter code and call the register_device.py script:
 
 ```sh
 source venv/bin/activate
