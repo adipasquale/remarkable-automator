@@ -2,10 +2,11 @@
 
 This tiny Python3 script uses [rmapy](https://github.com/subutux/rmapy) to upload files to the ReMarkable cloud. You can then use this script with Mac OS Automator workflows:
 
-1. a tiny app to select and upload files
-2. (more interestingly) a "Folder Action" that will upload all EPUB files downloaded
+1. App: select Finder items & upload
+2. Quick Action: right-click shortcut in Finder
+3. Folder Action : auto-upload downloaded EPUB files
 
-This works nicely with the [epub-press](https://github.com/haroldtreen/epub-press-clients) browser extensions that lets you create EPUB books easily from your browser
+This works nicely together with the [epub-press](https://github.com/haroldtreen/epub-press-clients) browser extensions that lets you create EPUB books easily from your browser
 
 ## Install
 
@@ -37,14 +38,21 @@ python3 upload_file.py /path/to/file.epub
 
 ## Automator Workflows (Apple Mac OS only)
 
-### 1. Regular Workflow
+### 1. App: select Finder items & upload
 
-You can try copying the `./remarkable-upload-file.workflow` file and see if it works out-of-the box for you, you may have to rewrite paths.
+Simply open `./remarkable-upload.app`. It should ask you to select file(s) and upload them.
 
-![remarkable-upload-file.workflow](https://raw.githubusercontent.com/adipasquale/remarkable-automator/main/remarkable-upload-file.workflow/Contents/QuickLook/Preview.png)
+### 2. Quick Action: right-click shortcut in Finder
 
-### 2. Folder Action : auto-upload all downloaded EPUB
+Install quick action by opening `./remarkable-upload-quick-action.workflow`. A prompt should appear and ask you to confirm. You should now see a new quick action appear when you right click items in the finder:
 
-Again, you can try copying the `./remarkable-upload-file.workflow` file and see if it works out-of-the box for you, you may have to rewrite paths.
+![screenshot quick action](https://raw.githubusercontent.com/adipasquale/remarkable-automator/main/screenshot-quick-action.png)
 
-![upload-downloaded-ebook-to-remarkable.workflow](https://raw.githubusercontent.com/adipasquale/remarkable-automator/main/upload-downloaded-ebook-to-remarkable.workflow/Contents/QuickLook/Preview.png)
+
+### 3. Folder Action : auto-upload downloaded EPUB files
+
+Install quick action by opening `./remarkable-auto-upload.workflow`. A prompt should appear and ask you to confirm.
+
+All EPUB files created in the `~/Downloads` folder should now be automatically uploaded.
+
+![remarkable-auto-upload.workflow](https://raw.githubusercontent.com/adipasquale/remarkable-automator/main/remarkable-auto-upload.workflow/Contents/QuickLook/Preview.png)
